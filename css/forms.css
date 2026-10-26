@@ -1,0 +1,146 @@
+.form-section {
+  padding: 3rem 0 5rem;
+}
+
+.form-layout,
+.tracking-layout {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.form-card {
+  padding: 2rem;
+}
+
+.form-grid {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.two-columns {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.full-row {
+  grid-column: 1 / -1;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.field-group label {
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.field-group input,
+.field-group textarea {
+  width: 100%;
+  min-height: 48px;
+  padding: 0.85rem 0.9rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: #fff;
+  color: var(--color-text);
+}
+
+.field-group textarea {
+  min-height: 160px;
+  resize: vertical;
+}
+
+.field-group input:focus,
+.field-group textarea:focus {
+  outline: 2px solid rgba(74, 144, 226, 0.25);
+  border-color: var(--color-accent);
+}
+
+.input-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.75rem;
+}
+
+.form-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.tracking-result {
+  margin-top: 1.5rem;
+  background: var(--color-surface-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+}
+
+.tracking-card {
+  display: grid;
+  gap: 1rem;
+}
+
+.tracking-label {
+  margin: 0 0 0.3rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.tracking-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.status-recebida {
+  background: rgba(255, 193, 7, 0.12);
+  color: #9a6700;
+}
+
+.status-em-análise {
+  background: rgba(74, 144, 226, 0.12);
+  color: #1047a3;
+}
+
+.status-concluída {
+  background: rgba(39, 174, 96, 0.12);
+  color: #0f7b42;
+}
+
+.tracking-message {
+  margin: 0;
+  color: var(--color-text);
+}
+
+@media (max-width: 760px) {
+  .form-layout,
+  .tracking-layout,
+  .two-columns,
+  .tracking-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
