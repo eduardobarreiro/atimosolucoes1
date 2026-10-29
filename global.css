@@ -1,0 +1,163 @@
+.container {
+  width: min(var(--container-width), calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.section {
+  padding: 4.5rem 0;
+}
+
+.section-alt {
+  background: var(--color-surface-alt);
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.nav-shell {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 80px;
+  gap: 1rem;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-width: 0;
+}
+
+.brand-logo {
+  display: block;
+  height: 46px;
+  width: auto;
+  max-width: 180px;
+  object-fit: contain;
+  filter: brightness(1.02);
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.brand-text strong {
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.brand-text small {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 1rem;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.main-nav a {
+  transition: color var(--transition-speed) ease;
+}
+
+.main-nav a:hover,
+.main-nav a:focus-visible {
+  color: var(--color-accent);
+}
+
+.site-header {
+  background: var(--color-primary);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.page-shell {
+  padding: 3.5rem 0 5rem;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: clamp(2.2rem, 5vw, 3.7rem);
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  line-height: 1.2;
+  margin-bottom: 0.9rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.8rem;
+}
+
+p {
+  color: var(--color-text-muted);
+}
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+}
+
+.form-status {
+  min-height: 1.6em;
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+.form-status.error {
+  color: var(--color-error);
+}
+
+.form-status.success {
+  color: var(--color-success);
+}
+
+.muted-note {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 700px) {
+  .nav-shell {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 0;
+  }
+
+  .main-nav {
+    justify-content: flex-start;
+  }
+}
